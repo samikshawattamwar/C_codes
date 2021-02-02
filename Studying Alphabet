@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+     int n,i,j,k, count=0;
+     char str[1000];
+     char cnt[1000];
+     scanf("%s",str);
+     scanf("%d",&n);
+     
+     for(i=1; i<=n; i++){
+         scanf("%s",cnt);
+         
+         count =0;
+         for(j=0; j<strlen(str); j++){
+             for(k=0; k<strlen(cnt); k++){
+                 if(str[j] == cnt[k]){
+                     count =count + 1;
+                 }
+             }
+         }
+         
+         if(count == strlen(cnt))
+         printf("Yes\n");
+         else
+         printf("No\n");
+     }
+     
+	return 0;
+}
+
